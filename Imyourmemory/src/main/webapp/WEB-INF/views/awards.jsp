@@ -1,12 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <script src="../js/script.js"></script>
+    <link href="<c:url value='/resources/css/style.css'/>" rel="stylesheet" type="text/css" />
+    <script src="/resources/js/script.js"></script>
 <title>52주 기념</title>
 </head>
 <body>
@@ -117,7 +122,7 @@
               <span class="d-ib signature">Hewlecture</span>
             </div>
             <div class="logo-h">
-              <img src="./imgs/018.png" alt="휴렉처로고" />
+              <img src="/resources/images/018.png" alt="휴렉처로고" />
             </div>
           </section>
         </div>

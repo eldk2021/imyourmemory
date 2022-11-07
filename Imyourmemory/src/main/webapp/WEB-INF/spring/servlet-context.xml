@@ -18,7 +18,10 @@
 <!-- 	<context:annotation-config/>  -->
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/resources/**" location="/resources/" />
+	<!--/resources/+그 안의 모든 폴더는 location의 /resources/으로 접근 가능-->
+	<resources mapping="/resources/**" location="/resources/" /> 
+	<!-- <resources mapping="/WEB-INF/views/css/**" location="/css/" /> -->
+
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<!-- Resolver - 이벤트를 중간에 낚아챔 -->
