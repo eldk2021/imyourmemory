@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- Annotation을 사용하겠다! -->
+	<annotation-driven />
+	
+	
+	<!-- component-scan을 선언했다면 context:annotation-config를 선언할 필요가 없다. -->
+<!-- 	<context:annotation-config/>  -->
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<!-- Resolver - 이벤트를 중간에 낚아챔 -->
+	<!-- InternalResourceViewResolver - View 정보가 넘어올 경우 이벤트를 낚아챔. 정보 앞 뒤에 경로를 추가 -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	<!--어디서부터 Class파일을 읽겠다. 위치지정이다? 특정영역을 지정해서 읽을 수 있다. -->
+	<context:component-scan base-package="com.imyourmemory" />
+	
+	
+	
+</beans:beans>
