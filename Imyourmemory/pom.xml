@@ -8,8 +8,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<java-version>1.8</java-version>
-		<org.springframework-version>5.0.7.RELEASE
-		</org.springframework-version>
+		<org.springframework-version>5.0.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 		<m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
@@ -113,12 +112,19 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>spring-test</artifactId> -->
-		<!-- <version>${org.springframework-version}</version> -->
-		<!-- <scope>test</scope> -->
-		<!-- </dependency> -->
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${org.springframework-version}</version>
+		<scope>test</scope>
+		</dependency> 
+
+<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+    <version>11.0.0-M9</version>
+</dependency>
 
 		<!-- jackson -->
 		<dependency>
